@@ -1,0 +1,242 @@
+/*import ตัวอักษร*/
+@import url('https://fonts.googleapis.com/css2?family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* All Page */
+
+* {
+    font-family: Niramit, cursive ;
+    background-color: #f3e5f5;
+}
+
+header, footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+}
+
+
+nav {
+    background-color: #fbfcbd; 
+    margin: 0px;
+    padding: 0px 20px; /* เพิ่มช่องว่างซ้าย-ขวาให้สวยงาม */
+    display: flex; /* สั่งให้ .Logo และ ul ขึ้นมาอยู่บรรทัดเดียวกัน */
+    flex-direction: row;
+    justify-content: space-between; /* ดันโลโก้ไปซ้ายสุด และกลุ่มเมนูไปขวาสุด */
+    align-items: center; /* จัดให้ข้อความทั้งหมดอยู่กึ่งกลางแนวดิ่งพอดี */
+}
+
+nav ul {
+    /* ลบ background-color: red; ออกเพื่อไม่ให้สีทับซ้อน */
+    margin: 0px;
+    padding: 0px;
+    list-style: none; 
+    display: flex; 
+    flex-direction: row;
+}
+
+nav a {
+   display: block;
+   color: black;
+   background-color: #fbfcbd; 
+   text-decoration: none;
+   /* ลบ background-color: red; ออกเพื่อให้เวลา Hover เปลี่ยนสีได้เต็มบล็อกไม่มีขอบเหลืองแลบ */
+   padding: 15px 20px; /* ปรับพิกเซลให้ความสูงสมดุลกับโลโก้ */
+   transition: background-color 0.2s; /* เพิ่มความนุ่มนวลตอน Hover */
+}
+
+nav a:hover {
+   background-color: gray; 
+}
+
+.Logo {
+    /* ลบ background:#fbfcbd; ออก เพื่อให้กลืนไปกับแถบสีแดงและเคลียร์ปัญหาขอบตอน Hover */
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    padding: 15px 0px; 
+    background-color: #fbfcbd; 
+}
+
+
+/* resume.html*/
+
+.profile-pic {
+    width: 220px;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid #9c27b0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 20px #90499c; 
+}
+
+.contact_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* จัดกลุ่ม span ทั้งหมดให้อยู่กึ่งกลางหน้าจอ */
+    align-items: center;     
+    gap: 40px;               /* ระยะห่างระหว่างกลุ่มติดต่อ */
+    flex-wrap: nowrap;       /* บังคับให้อยู่ในแถวเดียวกันเสมอ ไม่ให้หล่นลงมาคนละบรรทัด */
+}
+
+.contact_info span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;     /* จัดให้ไอคอนกับตัวหนังสือขนานตรงกันในแนวตั้ง */
+    gap: 8px;                /* ระยะห่างระหว่าง "ไอคอน" กับ "ข้อความ" ข้างๆ (มักจะชิดกว่า gap ด้านบน) */
+}
+
+.contact_info img {
+    height: 20px;
+    width: auto;             
+    object-fit: contain;     
+}
+
+.contact_info a:hover {
+   color: red; 
+}
+main {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+main ul li{
+    padding-right: 20px;
+}
+
+section {
+    border: 1px #9c27b0 dashed;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+section h3{
+    background-color: #ce93d8;
+    text-decoration: none;
+    text-indent: 20px; /* คล้าย ๆ ย่อหน้า */
+}
+
+span {
+    font-weight: bold;
+    color: #6a007c ;
+}
+
+span.detail {
+    font-weight: normal ;
+    font-style: italic;
+    color: #9c27b0
+}
+
+.actitvity_list ul li{
+    padding-top : 10px;
+}
+ 
+/*project.html*/
+h2{
+    background-color: #ce93d8;
+    text-align: center;
+    color: #6a007c ;    
+}
+
+.project_display{
+    display: flex;
+    justify-content: center; /* จัดกึ่งกลางแนวนอน */
+    align-items: center;     /* จัดกึ่งกลางแนวดิ่ง */
+    width: 50%;             /* ขยายพื้นที่กล่องครอบให้เต็มหน้าจอ */
+    aspect-ratio: 210 / 297; /* บังคับสัดส่วน กว้าง:สูง ให้เป็น A4 เสมอ */
+    padding: 20px 50px 20px 50px; /*top right bottom left*/
+    
+}
+
+.list_descrip li{
+    padding: 15px 40px 15px 20px;
+}
+
+.project_info{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+/* contact.html*/
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color:#6a007c;
+}
+
+/* สั่งงานที่กล่องครอบ เพื่อจัดให้ลูก (iframe) อยู่ตรงกลาง */
+.container {
+    display: flex;
+    justify-content: center; /* จัดกึ่งกลางแนวนอน */
+    align-items: center;     /* จัดกึ่งกลางแนวดิ่ง */
+    width: 100%;             /* ขยายพื้นที่กล่องครอบให้เต็มหน้าจอ */
+}
+
+iframe {
+    border: none;
+}
+
+
+
+/*Responsive*/
+@media screen and (max-width : 1024px){
+    
+    /*navigation bar*/
+    nav {
+        flex-direction: column; /* สั่งให้ .Logo และ ul แยกกันอยู่คนละบรรทัด (บน-ล่าง) */
+        align-items: center;    /* จัดให้ทั้งโลโก้และเมนูอยู่กึ่งกลางหน้าจอ */
+        padding: 10px 0px;      /* ปรับช่องว่างบน-ล่างให้สมดุล */
+    }
+
+    nav ul {
+        flex-direction: column; /* สั่งให้เมนู CV, Contact ด้านในเรียงเป็นแนวตั้งลงมาด้วย */
+        width: 100%;            /* ขยายเมนูให้กว้างเต็มหน้าจอ */
+        text-align: center;
+    }
+
+    nav ul li {
+        width: 100%;            /* ให้กล่องเมนูแต่ละอันกว้างเต็มพื้นที่ */
+    }
+
+    nav a {
+        text-align: center;     /* จัดให้ข้อความในปุ่มอยู่ตรงกลาง */
+        padding: 12px 0px;      /* เพิ่มพื้นที่กดปุ่มให้ง่ายขึ้นบนมือถือ */
+    }
+
+    .Logo {
+        padding: 10px 0px;      /* ปรับระยะขอบของโลโก้ตอนแยกบรรทัด */
+    }
+
+    /*project.html*/
+    .project_info{
+    display: flex;
+    flex-direction: column;
+    }
+
+    .project_display{
+        width: 100%;         
+        padding: 0px 0px 0px 0px; 
+    }
+    
+    p{
+        padding: 10px 10px 10px 10px ;
+    }
+
+    .contact_info{
+        flex-direction: column;
+        gap: 2px;     
+    }
+}
